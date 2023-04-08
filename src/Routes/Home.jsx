@@ -16,7 +16,7 @@ const Home = () => {
       <h1>Home</h1>
       <div className="card-grid">
         {loading ? (
-          <p>Cargando...</p>
+          <p></p>
         ) : errorFetch ? (
           <p>Error: {errorFetch}</p>
         ) : (

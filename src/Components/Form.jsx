@@ -14,7 +14,6 @@ const Form = () => {
       setAlert(`Por favor, verfique su información`)
       return;
     }
-
     setAlert(
       `Gracias ${nombre}, te contactaremos lo antes posible vía correo electrónico.`
     );

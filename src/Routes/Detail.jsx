@@ -5,14 +5,14 @@ import { useParams } from "react-router-dom";
 
 const Detail = () => {
   const {theme}= useContext(ContextGlobal)
-  const [dentist, setDentist] = useState(null);
+  const [dentist, stateDentist] = useState(null);
   const { id } = useParams();
  
   useEffect(() => {
     const fetchDentist = async () => {
       const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
       const data = await response.json();
-      setDentist(data);
+      stateDentist(data);
     }
     fetchDentist();
   }, [id]);
@@ -41,7 +41,7 @@ const Detail = () => {
           </tbody>
         </table>
       ) : (
-        <p>Cargando...</p>
+        <p></p>
       )}
     </div>
   )
